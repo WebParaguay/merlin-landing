@@ -16,7 +16,7 @@ const PricingCard = ({ item }) => {
           <div>
             <h2 className="h3">{item.title}</h2>
             <p className="mt-3 text-2xl text-dark">
-              {item.pre_currency} {item.price}.00 {item.post_currency}
+              {item.pre_currency} {item.price} {item.post_currency}
             </p>
           </div>
           <span
@@ -57,7 +57,7 @@ const PricingCard = ({ item }) => {
           >
             {item.buttons.buy_now.label}
           </a>
-          <a
+          {/* <a
             className="mt-6 inline-flex items-center text-dark"
             href={item.buttons.free_trial.link}
           >
@@ -75,7 +75,7 @@ const PricingCard = ({ item }) => {
                 fill="currentColor"
               ></path>
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

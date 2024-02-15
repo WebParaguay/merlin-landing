@@ -1,85 +1,39 @@
 {
   "main": [
     {
-      "name": "Home",
-      "url": "/"
+      "name": "Faturación",
+      "url": "/facturacion"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Beneficios",
+      "url": "/beneficios"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "name": "Planes",
+      "url": "/planes"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
-      "name": "How It Works",
-      "url": "/how-it-works"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Career",
-          "url": "/career"
-        },
-
-        {
-          "name": "Integrations",
-          "url": "/integrations"
-        },
-
-        {
-          "name": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "name": "Sign In",
-          "url": "/signin"
-        },
-
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Terms And Conditions",
-          "url": "/terms-and-conditions"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Integración",
+      "url": "/integracion"
     }
   ],
 
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Faturación",
+      "url": "/facturacion"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Beneficios",
+      "url": "/beneficios"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Planes",
+      "url": "/planes"
     },
     {
-      "name": "Changelog",
-      "url": "/changelog"
+      "name": "Integración",
+      "url": "/integracion"
     }
   ]
 }

@@ -1,25 +1,160 @@
 ---
 import Base from "@/layouts/Base.astro";
 import Banner from "@/layouts/components/Banner.astro";
-import KeyFeatures from "@/layouts/components/KeyFeatures.astro";
-import Testimonial from "@/layouts/components/Testimonial.astro";
-import Service from "@/layouts/components/Service.astro";
 import Cta from "@/layouts/partials/Cta.astro";
+import Works from "@/components/about/Works.astro";
 import { getEntryBySlug } from "astro:content";
+import { Image } from "astro:assets";
+import config from "@/config/config.json";
+import PricingCard from "@/layouts/function-components/PricingCard.jsx";
 
+const { contact_form_action } = config.params;
 const homepage = await getEntryBySlug("homepage", "index");
-const { banner, key_features, service, testimonial } = homepage.data;
+const about = await getEntryBySlug("about", "index");
+const pricing = await getEntryBySlug("pricing", "index");
+const { banner, message } = homepage.data;
+const { features } = about.data;
 ---
 
 <Base>
   <!-- banner -->
   <Banner banner={banner} />
-  <!-- key features -->
-  <KeyFeatures key_features={key_features} />
-  <!-- service -->
-  <Service service={service} />
-  <!-- testimonial -->
-  <Testimonial testimonial={testimonial} />
+  <section class="section pt-0 text-[18px]">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto text-center lg:col-8">
+          <p>{message.content}</p>
+        </div>
+        <div class="flex flex-row justify-center mt-4">
+          {
+            message.button.enable && (
+              <div>
+                <a class="btn btn-white" href={message.button.link}>
+                  {message.button.label}
+                </a>
+              </div>
+            )
+          }
+          {
+            message.secondaryButton.enable && (
+              <div>
+                <a class="btn btn-primary ml-4" href={message.secondaryButton.link}>
+                  {message.secondaryButton.label}
+                </a>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- our works -->
+  <Works features={features} />
+  <!-- plans -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row pb-20">
+        <div class="mx-auto text-center lg:col-7">
+          <h2>Nuestros Planes</h2>
+          <p class="mt-4">Elegí el plan que mas se adapta a tus necesidades, pudes actualizar y cambiar de plan en el momento que quieras.</p>
+        </div>
+      </div>
+      <div class="row lg:px-10">
+        {
+          pricing.data.pricing_card.map((item: any, i: number) => (
+            <PricingCard item={item} client:load />
+          ))
+        }
+      </div>
+    </div>
+  </section>
   <!-- call to action -->
   <Cta />
+  <!-- contact -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row mb-8 mt-10">
+        <div class="mx-auto text-center lg:col-7">
+          <h2>¿Consultas?...</h2>
+          <p class="mt-4">Preguntanos lo que necesitas saber sobre Merlin</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-10 text-center md:col-6 md:order-2 md:mb-0 md:pt-9">
+          <div class="contact-img relative inline-flex pb-5 pl-5">
+            <Image
+              src="/images/contact-img.png"
+              height={544}
+              width={500}
+              alt=""
+            />
+            <Image
+              class="absolute bottom-0 left-0 -z-[1] h-14 w-14"
+              src="/images/shape-2.png"
+              alt=""
+              height={56}
+              width={56}
+            />
+          </div>
+        </div>
+        <div class="md:col-6 md:order-1">
+          <form
+            class="lg:max-w-[484px]"
+            action={contact_form_action}
+            method="POST"
+          >
+            <div class="form-group mb-5">
+              <label class="form-label" for="name">Nombre completo</label>
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                placeholder="Tu nombre completo"
+              />
+            </div>
+            <div class="form-group mb-5">
+              <label class="form-label" for="name">Rubro</label>
+              <input
+                class="form-control"
+                type="text"
+                id="rubro"
+                placeholder="Tu rubro"
+              />
+            </div>
+            <div class="form-group mb-5">
+              <label class="form-label" for="eamil">Número de teléfono</label>
+              <input
+                class="form-control"
+                type="text"
+                id="phone"
+                placeholder="Tu número de teléfono"
+              />
+            </div>
+            <div class="form-group mb-5">
+              <label class="form-label" for="eamil">Correo electrónico</label>
+              <input
+                class="form-control"
+                type="text"
+                id="email"
+                placeholder="Tu correo electrónico"
+              />
+            </div>
+            <div class="form-group mb-5">
+              <label class="form-label" for="message">Mensaje</label>
+              <textarea
+                class="form-control h-[150px]"
+                id="message"
+                cols="30"
+                rows="10"></textarea>
+            </div>
+            <input
+              class="btn btn-primary block w-full"
+              type="submit"
+              value="Enviar Mensaje"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

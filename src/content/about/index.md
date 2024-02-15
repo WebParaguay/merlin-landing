@@ -39,24 +39,24 @@ gallery:
 
 ## our works
 features:
-  title: The six core work <br /> drive everything do
+  title: Porque elegir a Merlin como tu sistema de facturación
   button:
-    label: Download The Theme
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    label: Ver planes
+    link: ""
     enable: true
   features_list:
-    - title: Accessibility
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Empowerement
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Excellence
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Innovation
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Innovation
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
-    - title: Innovation
-      content: Nulla porttitor acmsan tinci dunt. posuere cubilia Cudfrae Donec velit neque, autor sit amet aliuam vel
+    - title: Facil implementación
+      content: Podras tener acceso a la plataforma en menos de una semana y acceder desde cualquier lugar donde estés, solo necesitás acceso a internet.
+    - title: Ahorra tiempo y recurso
+      content: Un sistema sencillo y accesible que te permite generar facturas con facilidad y mantener un registro organizado de tus transacciones.
+    - title: Normativas vigentes
+      content: La obligatoriedad de facturar de manera electrónica es inminente, por eso te ofrecemos una herramienta que ademas simplificar tus procesos, cumpla con toda las normativas.
+    - title: Constante evolución
+      content: Con nuestro equipo de desarrollo y soporte hacemos que Merlín este a la vanguardia de las ultimas tecnologías, además vas a contár con un equipo de soporte pemanente a tu disposición.
+    - title: Diversidad de Planes
+      content: Planes desde 100 facturas mensuales hasta planes personalizados, precios accesibles y adaptados según tu necesidad.
+    - title: Integrable
+      content: Merlin se puede integrar a cualquier sistema ERP que estes utilizando, de manera a que puedas facturar de manera electróncia sin preocuparte de cambios grandes en tus procesos.
     
 
 ## members
