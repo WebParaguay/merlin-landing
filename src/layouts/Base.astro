@@ -33,10 +33,11 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  showHeader?: boolean;
 }
 
 // distructure frontmatters
-const { title, meta_title, description, image, noindex, canonical } =
+const { title, meta_title, description, image, noindex, canonical, showHeader = true } =
   Astro.props;
 ---
 
@@ -168,10 +169,18 @@ const { title, meta_title, description, image, noindex, canonical } =
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 120px;
+      }
+    </style>
   </head>
   <body>
     <TwSizeIndicator />
-    <Header />
+    {showHeader &&
+      <Header />
+    }
     <main id="main-content">
       <slot />
     </main>

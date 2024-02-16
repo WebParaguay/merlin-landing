@@ -5,22 +5,22 @@ banner:
   image: /images/banner-img.png
   button:
     label: Quiero saber más
-    link: ""
+    link: "#contacto"
     enable: true
   secondaryButton:
     label: Ver planes
-    link: ""
+    link: "#planes"
     enable: true
 
-message:
+summary:
   content: "Con la inminente obligatoriedad del uso de facturación electrónica, es crucial contar con una solución sencilla de usar, facil implementación y adaptable a cualquier  sistema administrativo. Merlin es un facturador que te ofrece una plataforma intuitiva para simplificar tu procesos de facturación, ademas es integrable con casí todos los sistemas de gestión administrativa."
   button:
     label: Quiero saber más
-    link: ""
+    link: "#contacto"
     enable: true
   secondaryButton:
     label: Ver planes
-    link: ""
+    link: "#planes"
     enable: true
 
 ##key features

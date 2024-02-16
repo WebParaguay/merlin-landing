@@ -1,0 +1,24 @@
+---
+import { getEntryBySlug } from "astro:content";
+import PricingCard from "@/layouts/function-components/PricingCard";
+
+const pricing = await getEntryBySlug("pricing", "index");
+---
+
+<section id="planes" class="section pt-0">
+    <div class="container">
+      <div class="row pb-10">
+        <div class="mx-auto text-center lg:col-7">
+          <h2>Nuestros Planes</h2>
+          <p class="mt-4">Elegí el plan que mas se adapta a tus necesidades, pudes actualizar y cambiar de plan en el momento que quieras.</p>
+        </div>
+      </div>
+      <div class="row lg:px-10">
+        {
+          pricing.data.pricing_card.map((item: any, i: number) => (
+            <PricingCard item={item} client:load />
+          ))
+        }
+      </div>
+    </div>
+</section>

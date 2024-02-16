@@ -1,0 +1,36 @@
+---
+import { getEntryBySlug } from "astro:content";
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { summary } = homepage.data;
+---
+
+<section id="facturacion" class="section pt-0 text-[18px]">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto text-center lg:col-8">
+          <p>{summary.content}</p>
+        </div>
+        <div class="flex flex-row justify-center mt-4">
+          {
+            summary.button.enable && (
+              <div>
+                <a class="btn btn-white" href={summary.button.link}>
+                  {summary.button.label}
+                </a>
+              </div>
+            )
+          }
+          {
+            summary.secondaryButton.enable && (
+              <div>
+                <a class="btn btn-primary ml-4" href={summary.secondaryButton.link}>
+                  {summary.secondaryButton.label}
+                </a>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+</section>

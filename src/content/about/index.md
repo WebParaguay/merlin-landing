@@ -42,7 +42,7 @@ features:
   title: Porque elegir a Merlin como tu sistema de facturación
   button:
     label: Ver planes
-    link: ""
+    link: "#planes"
     enable: true
   features_list:
     - title: Facil implementación

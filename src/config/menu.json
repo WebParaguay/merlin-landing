@@ -2,38 +2,38 @@
   "main": [
     {
       "name": "Faturación",
-      "url": "/facturacion"
+      "url": "#facturacion"
     },
     {
       "name": "Beneficios",
-      "url": "/beneficios"
+      "url": "#beneficios"
     },
     {
       "name": "Planes",
-      "url": "/planes"
+      "url": "#planes"
     },
     {
       "name": "Integración",
-      "url": "/integracion"
+      "url": "#integracion"
     }
   ],
 
   "footer": [
     {
       "name": "Faturación",
-      "url": "/facturacion"
+      "url": "#facturacion"
     },
     {
       "name": "Beneficios",
-      "url": "/beneficios"
+      "url": "#beneficios"
     },
     {
       "name": "Planes",
-      "url": "/planes"
+      "url": "#planes"
     },
     {
       "name": "Integración",
-      "url": "/integracion"
+      "url": "#integracion"
     }
   ]
 }
