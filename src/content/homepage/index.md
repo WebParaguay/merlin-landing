@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Facturá de manera Electrónica con Merlin"
+  title: "Facturá de manera Electrónica con Merlín"
   content: "Al alcance de tu mano y de rapida implementación"
   image: /images/banner-img.png
   button:

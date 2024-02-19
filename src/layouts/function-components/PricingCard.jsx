@@ -6,7 +6,7 @@ import * as Icon from "react-feather";
 const PricingCard = ({ item }) => {
   const FeatherIcon = Icon[humanize(item.icon)];
   return (
-    <div className="mt-8 px-3 md:col-6 lg:col-4 lg:mt-0 mb-8" key={item.title}>
+    <div className="mt-8 px-3 col-12 md:col-6 lg:col-4 lg:mt-0 mb-8" key={item.title}>
       <div
         className={`rounded-xl bg-white px-8 py-10 shadow-lg ${
           item.featured ? "border border-primary " : undefined
