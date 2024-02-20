@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import Shape from "@/components/Shape.astro";
 import { getEntryBySlug } from "astro:content";
+import BudgetForm from "@/layouts/function-components/BudgetForm";
 
 const budget = await getEntryBySlug("budget", "index");
 ---
@@ -13,75 +14,5 @@ const budget = await getEntryBySlug("budget", "index");
   showHeader={false}
 >
   <Shape />
-  <section class="section pt-0">
-      <div class="container">
-        <div class="row mb-8 mt-10">
-          <div class="mx-auto text-center lg:col-7">
-            <h2>Solicitar Presupuesto</h2>
-          </div>
-        </div>
-        <div class="row justify-center">
-          <div class="md:col-6">
-            <form
-              class="lg:max-w-[484px]"
-              action=""
-              method="POST"
-            >
-              <div class="form-group mb-5">
-                <label class="form-label" for="name">Nombre y Apellido</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="name"
-                  placeholder="Tu nombre y apellido"
-                />
-              </div>
-              <div class="form-group mb-5">
-                <label class="form-label" for="eamil">Número de teléfono</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="phone"
-                  placeholder="Tu número de teléfono"
-                />
-              </div>
-              <div class="form-group mb-5">
-                <label class="form-label" for="eamil">Correo electrónico</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  id="email"
-                  placeholder="Tu correo electrónico"
-                />
-              </div>
-              <div class="form-group mb-5">
-                <label class="form-label" for="reason">Plan</label>
-                <select name="reason" id="reason" class="form-select" required>
-                  <option value="">Seleccionar plan</option>
-                  <option value="">Plan Básico - Gs. 100.000</option>
-                  <option value="">Plan Estandar - Gs. 250.000</option>
-                  <option value="">Plan Profesional - Gs. 350.000</option>
-                  <option value="">Plan Empresarial - Gs. 450.000</option>
-                  <option value="">Personalizado - Precio según necesidad</option>
-                </select>
-              </div>
-              <div class="form-group mb-5">
-                <label class="form-label" for="reason">Necesitas Integración?</label>
-                <select name="reason" id="reason" class="form-select" required>
-                  <option value="">Seleccionar</option>
-                  <option value="">Si</option>
-                  <option value="">No</option>
-                </select>
-                <p class="mt-1 text-[12px]">Marque si, si ya cuenta con un sistema de gestión administrativa y quiere integrar el facturador al sistema</p>
-              </div>
-              <input
-                class="btn btn-primary block w-full"
-                type="submit"
-                value="Enviar Solicitud"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-  </section>
+  <BudgetForm client:load />
 </Base>

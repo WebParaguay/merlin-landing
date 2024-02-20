@@ -5,7 +5,7 @@ import Cta from "@/layouts/partials/Cta.astro";
 import Summary from "@/components/Summary.astro";
 import Works from "@/components/about/Works.astro";
 import Plans from "@/components/Plans.astro";
-import ContactForm from "@/components/ContactForm.astro";
+import ContactForm from "@/layouts/function-components/ContactForm";
 import { getEntryBySlug } from "astro:content";
 
 const homepage = await getEntryBySlug("homepage", "index");
@@ -26,5 +26,5 @@ const { features } = about.data;
   <!-- call to action -->
   <Cta />
   <!-- contact -->
-  <ContactForm />
+  <ContactForm client:load />
 </Base>
