@@ -27,9 +27,9 @@ const BudgetForm = () => {
                 })
             });
             const data = await response.json();
-
-            setShowSuccess(true);
-            clearForm();
+            location.href = '/formulario-exitoso';
+            // setShowSuccess(true);
+            // clearForm();
         } catch (error) {
           console.log(error);
           alert('Error enviando mensaje');

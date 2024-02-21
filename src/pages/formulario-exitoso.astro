@@ -1,0 +1,30 @@
+---
+import Base from "@/layouts/Base.astro";
+import Shape from "@/components/Shape.astro";
+import { getEntryBySlug } from "astro:content";
+
+const formularioExitoso = await getEntryBySlug("formulario-exitoso", "index");
+---
+
+<Base
+  title={formularioExitoso.data.title}
+  meta_title={formularioExitoso.data.meta_title}
+  description={formularioExitoso.data.description}
+  image={formularioExitoso.data.image}
+>
+  <Shape />
+  <section class="section mb-[200px] mt-[50px]">
+    <div class="row">
+        <div class="mx-auto text-center lg:col-5">
+            <h2 class="mb-[80px]">¡Hemos recibido su solicitud!</h2>
+            <p>Gracias por tu interés en nuestros servicios! Estamos emocionados de embarcarnos en este viaje contigo. Aguarda una comunicación de nuestra parte 😃</p>
+            <div>
+                <a class="btn btn-primary mt-20" href="/">
+                    Volver al inicio
+                </a>
+            </div>
+        </div>
+    </div>
+  </section>
+</Base>
+
